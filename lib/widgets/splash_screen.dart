@@ -78,7 +78,6 @@ class _SplashScreenState extends State<SplashScreen>
 
     _mockCheckForSession().then((status) {
       if (status) {
-//            _navigateToHome();
         _navigateToLogin();
       } else {
         _navigateToLogin();
@@ -93,7 +92,8 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   void _navigateToLogin() {
-    Get.to(LoginScreen());
+//    Get.to(LoginScreen());
+    Get.toNamed("/login");
   }
 
   @override

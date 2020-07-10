@@ -1,0 +1,58 @@
+{
+    "student": [
+        {
+            "id": 1,
+            "name": "Diego",
+            "turma": "Turma 2º B",
+            "game": 51,
+            "pending_homework": 3,
+            "delayed_homework": 5,
+            "up_to_date_homework": 1
+        },
+        {
+            "id": 2,
+            "name": "Dani",
+            "turma": "Turma 2º B",
+            "game": 17,
+            "pending_homework": 1,
+            "delayed_homework": 5,
+            "up_to_date_homework": 7
+        },
+        {
+            "id": 3,
+            "name": "Bartolomeu",
+            "turma": "Turma 2º B",
+            "game": 51,
+            "pending_homework": 2,
+            "delayed_homework": 6,
+            "up_to_date_homework": 4
+        },
+        {
+            "id": 4,
+            "name": "Mary",
+            "turma": "Turma 2º B",
+            "game": 50,
+            "pending_homework": 2,
+            "delayed_homework": 6,
+            "up_to_date_homework": 2
+        },
+        {
+            "id": 5,
+            "name": "Joseph",
+            "turma": "Turma 2º B",
+            "game": 81,
+            "pending_homework": 5,
+            "delayed_homework": 8,
+            "up_to_date_homework": 2
+        },
+        {
+            "turma": "Turma 2º B",
+            "name": "Joao",
+            "id": 6,
+            "game": 51,
+            "pending_homework": 2,
+            "delayed_homework": 0,
+            "up_to_date_homework": 0
+        }
+    ]
+}

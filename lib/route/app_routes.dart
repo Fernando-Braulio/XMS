@@ -6,7 +6,6 @@ class Routes {
 
   static final routes = [
     GetPage(name: '/student', page:()=> ListStudent(),),
-    //other page example
     GetPage(name: '/login', page:()=> LoginScreen()),
   ];
 }

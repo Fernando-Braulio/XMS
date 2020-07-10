@@ -1,8 +1,6 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:xms/animation/fade_animation.dart';
-//import 'package:project_gabriel/Animation/FadeAnimation.dart';
-//import 'package:project_gabriel/Animation/Loader.dart';
-//import 'package:project_gabriel/Widgets/Settings.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -17,10 +15,10 @@ class _LoginScreenState extends State<LoginScreen> {
         width: double.infinity,
         decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-              Colors.orange[900],
-              Colors.orange[800],
-              Colors.orange[400]
-            ])),
+          Colors.orange[900],
+          Colors.orange[800],
+          Colors.orange[400]
+        ])),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -44,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   FadeAnimation(
                       1.3,
                       Text(
-                        "Bem vindo de volta",
+                        "Identifique-se para acessar o XMS",
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       )),
                 ],
@@ -88,9 +86,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                                 color: Colors.grey[200]))),
                                     child: TextField(
                                       decoration: InputDecoration(
-                                          hintText: "Usuário",
+                                          hintText: "Nome do usuário",
                                           hintStyle:
-                                          TextStyle(color: Colors.grey),
+                                              TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                     ),
                                   ),
@@ -104,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       decoration: InputDecoration(
                                           hintText: "Senha",
                                           hintStyle:
-                                          TextStyle(color: Colors.grey),
+                                              TextStyle(color: Colors.grey),
                                           border: InputBorder.none),
                                     ),
                                   ),
@@ -114,44 +112,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: 40,
                         ),
-                        // FadeAnimation(
-                        //     1.5,
-                        //     Text(
-                        //       "Forgot Password?",
-                        //       style: TextStyle(color: Colors.grey),
-                        //     )),
-                        // SizedBox(
-                        //   height: 40,
-                        // ),
-                        FadeAnimation(
-                            1.6,
-                            Container(
-                              height: 50,
-                              margin: EdgeInsets.symmetric(horizontal: 50),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(50),
-                                  color: Colors.orange[900]),
-                              child: Center(
-                                child: Text(
-                                  "Entrar",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                            )),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        FadeAnimation(
-                            1.7,
-                            Text(
-                              "Ainda não configurou?",
-                              style: TextStyle(color: Colors.grey),
-                            )),
-                        SizedBox(
-                          height: 10,
-                        ),
                         Row(
                           children: <Widget>[
                             Expanded(
@@ -160,33 +120,20 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Container(
                                     height: 50,
                                     margin:
-                                    EdgeInsets.symmetric(horizontal: 50),
+                                        EdgeInsets.symmetric(horizontal: 50),
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(50),
-                                        color: Colors.black),
+                                        color: Colors.orange[900]),
                                     child: Center(
                                         child: GestureDetector(
                                             child: Text(
-                                              "Configurar",
+                                              "Entrar",
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold),
                                             ),
                                             onTap: () {
-                                              // Navigator.push(
-                                              //   context,
-                                              //   PageRouteBuilder(
-                                              //     pageBuilder: (c, a1, a2) => Setting(),
-                                              //     transitionsBuilder: (c, anim, a2, child) => FadeTransition(opacity: anim, child: child),
-                                              //     transitionDuration: Duration(milliseconds: 2000),
-                                              //   ),
-                                              // );
-//                                              Navigator.push(
-//                                                  context,
-//                                                  MaterialPageRoute(
-//                                                      builder: (BuildContext
-//                                                      context) =>
-//                                                          Setting()));
+                                              Get.offNamed("/student");
                                             })),
                                   )),
                             )

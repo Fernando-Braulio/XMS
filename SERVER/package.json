@@ -1,0 +1,9 @@
+{
+    "name": "studant",
+    "scripts": {
+        "server": "json-server -p 3333 -d 1000 student.json"
+    },
+    "devDependencies": {
+        "json-server": "^0.16.1"
+    }
+}

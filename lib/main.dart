@@ -9,6 +9,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     defaultTransition: Transition.fade,
     getPages: Routes.routes,
+    theme: ThemeData(primaryColor: Colors.white),
     home: SplashScreen(),
   ));
 }
