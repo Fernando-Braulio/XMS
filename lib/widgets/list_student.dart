@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xms/widgets/filter_widget.dart';
 // import 'package:get/get.dart';
 // import 'package:xms/repository/student_repository.dart';
 // import 'package:xms/date/student_date.dart';
@@ -47,27 +48,42 @@ class _ListStudentState extends State<ListStudent> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(10.0, 5.0, 0.0, 15.0),
-                child: Row(
-                  children: <Widget>[
-                    Text("Sem Filtro"),
-                    Text("Conceito Vermelho"),
-                    Text("Tarefa Pendente"),
-                    // Text("Baixo Engajamento"),
-                  ],
+                padding: EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 15.0),
+                child: Container(
+                  margin: EdgeInsets.symmetric(vertical: 20.0),
+                  height: 30.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      FilterWidget('Sem Filtro', true, 100.0),
+                      FilterWidget('Conceito Vermelho', false, 180.0),
+                      FilterWidget('Tarefa Pendente', false, 150.0),
+                      FilterWidget('Baixo Engajamento', false, 180.0),
+                    ],
+                  ),
                 ),
               ),
               Text("Selecione as turmas",
                   style:
                       TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0)),
               SizedBox(height: 5),
-              Row(
-                children: <Widget>[
-                  Text("Sem Filtro"),
-                  Text("Conceito Vermelho"),
-                  Text("Tarefa Pendente"),
-                  // Text("Baixo Engajamento"),
-                ],
+              Padding(
+                padding: EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 15.0),
+                child: Container(
+                  margin: EdgeInsets.symmetric(vertical: 20.0),
+                  height: 30.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      FilterWidget('Todas', false, 80.0),
+                      FilterWidget('2º B', true, 80.0),
+                      FilterWidget('2º C', false, 80.0),
+                      FilterWidget('1º A', false, 80.0),
+                      FilterWidget('2º A', false, 80.0),
+                      FilterWidget('1º C', false, 80.0),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
