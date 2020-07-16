@@ -1,7 +1,7 @@
 {
     "name": "studant",
     "scripts": {
-        "server": "json-server --host 10.20.30.16 -p 3333 -d 1000 student.json"
+        "server": "json-server --host 192.168.1.105 -p 3333 -d 1000 student.json"
     },
     "devDependencies": {
         "json-server": "^0.16.1"
