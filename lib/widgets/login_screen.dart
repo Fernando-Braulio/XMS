@@ -139,6 +139,17 @@ class _LoginScreenState extends State<LoginScreen> {
                             )
                           ],
                         ),
+                        SizedBox(
+                          height: 60,
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Text("Copyright 2020 Xmile Lerning",
+                                style: TextStyle(color: Colors.black87)),
+                            Text("Todos os direitos reservados",
+                                style: TextStyle(color: Colors.black54)),
+                          ],
+                        ),
                       ],
                     ),
                   ),

@@ -92,7 +92,6 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   void _navigateToLogin() {
-//    Get.to(LoginScreen());
     Get.offAllNamed("/login");
   }
 
