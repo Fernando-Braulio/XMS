@@ -36,6 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         "Login",
                         style: TextStyle(color: Colors.white, fontSize: 40),
                       )),
+                      // Image(image: AssetImage('assets/img/xmile-learning.png'), height: 100),
                   SizedBox(
                     height: 10,
                   ),
@@ -140,7 +141,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           ],
                         ),
                         SizedBox(
-                          height: 60,
+                          height: 10,
+                        ),
+                        Icon(Icons.fingerprint,
+                            size: 80, color: Colors.black54),
+                        SizedBox(
+                          height: 10,
                         ),
                         Column(
                           children: <Widget>[
