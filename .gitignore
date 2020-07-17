@@ -1,5 +1,5 @@
-/SERVER/node_modules/
-SERVER/node_modules/
+/SERVER/node_modules/*
+SERVER/node_modules/*
 
 # Miscellaneous
 *.class
