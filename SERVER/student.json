@@ -12,7 +12,7 @@
         {
             "id": 2,
             "name": "Dani",
-            "turma": "Turma 2º B",
+            "turma": "Turma 1º B",
             "game": 17,
             "pending_homework": 1,
             "delayed_homework": 5,
@@ -21,7 +21,7 @@
         {
             "id": 3,
             "name": "Bartolomeu",
-            "turma": "Turma 2º B",
+            "turma": "Turma 3º A",
             "game": 51,
             "pending_homework": 2,
             "delayed_homework": 6,

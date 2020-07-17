@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import 'package:xms/model/student.dart';
 
-const baseUrl = 'http://192.168.1.105:3333/student';
+const baseUrl = 'http://10.20.30.16:3333/student';
 
 class ListStudentDate {
   final http.Client httpStudant;

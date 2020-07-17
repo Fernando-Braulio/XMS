@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xms/widgets/dot_screen.dart';
+import 'package:xms/widgets/Splash/dot_screen.dart';
 import 'package:xms/widgets/login_screen.dart';
 import 'package:xms/route/app_routes.dart';
 
@@ -93,7 +93,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   void _navigateToLogin() {
 //    Get.to(LoginScreen());
-    Get.toNamed("/login");
+    Get.offAllNamed("/login");
   }
 
   @override

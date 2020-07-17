@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:xms/controller/student_controller.dart';
-import 'package:xms/widgets/dropdown_menu.dart';
-import 'package:xms/widgets/filter_widget.dart';
+import 'package:xms/widgets/Student/card_student.dart';
+import 'package:xms/widgets/Dropdown/dropdown_menu.dart';
+import 'package:xms/widgets/Student/filter_widget.dart';
 import 'package:xms/repository/student_repository.dart';
 import 'package:xms/date/student_date.dart';
 import 'package:http/http.dart' as http;
@@ -70,7 +71,7 @@ class _ListStudentState extends State<ListStudent> {
               Text("Selecione as turmas",
                   style:
                       TextStyle(fontWeight: FontWeight.w500, fontSize: 18.0)),
-              SizedBox(height: 5),
+              SizedBox(height: 2),
               Padding(
                 padding: EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 15.0),
                 child: Container(
@@ -115,30 +116,29 @@ class _ListStudentState extends State<ListStudent> {
                 ],
               ),
               Container(
-                child: GetX<StudentController>(
-                  init: StudentController(studentRepository: studentRepository),
-                  initState: (state) {
-                    Get.find<StudentController>().getAll();
-                  },
-                  builder: (_) {
-                    return _.postStudent.length < 1
-                        ? Center(
-                            child: CircularProgressIndicator(),
-                          )
-                        : ListView.builder(
-                            itemBuilder: (context, index) {
-                              return Container(
-                                  padding: EdgeInsets.all(2.0),
-                                  child: cardStudent(context, index));
-
-                              // ListTile(
-                              //   title: Text(_.postStudent[index].name),
-                              // );
-                            },
-                            itemCount: _.postStudent.length,
-//                          itemCount: 6,
-                          );
-                  },
+                child: Flexible(
+                  child: GetX<StudentController>(
+                    init:
+                        StudentController(studentRepository: studentRepository),
+                    initState: (state) {
+                      Get.find<StudentController>().getAll();
+                    },
+                    builder: (_) {
+                      return _.postStudent.length < 1
+                          ? Center(
+                              child: CircularProgressIndicator(),
+                            )
+                          : ListView.builder(
+                              itemBuilder: (context, index) {
+                                return Container(
+                                    padding: EdgeInsets.all(2.0),
+                                    child: cardStudent(
+                                        context, index, _.postStudent));
+                              },
+                              itemCount: _.postStudent.length,
+                            );
+                    },
+                  ),
                 ),
               ),
             ],
@@ -147,74 +147,4 @@ class _ListStudentState extends State<ListStudent> {
       ),
     );
   }
-}
-
-Widget cardStudent(BuildContext context, int index) {
-  // final trip = tripsList[index];
-  return new Container(
-    child: Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0, bottom: 1.0),
-              child: Row(
-                children: <Widget>[
-                  Text(
-                    "Maria Jose",
-                    style: new TextStyle(fontSize: 18.0),
-                  ),
-                  Spacer(),
-                  Icon(Icons.extension),
-                  Icon(Icons.notifications),
-                  Icon(Icons.more_vert),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4.0, bottom: 1.0),
-              child: Row(children: <Widget>[
-                Text(
-                  "Turma 2º B",
-                  style: TextStyle(color: Colors.grey[500]),
-                ),
-                Spacer(),
-              ]),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4.0, bottom: 8.0),
-              child: Row(children: <Widget>[
-                Text(
-                  "Conclusão do Jogo",
-                  style: TextStyle(color: Colors.grey[500]),
-                ),
-                Spacer(),
-              ]),
-            ),
-            Divider(),
-            Padding(
-              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-              child: Row(
-                children: <Widget>[
-                  Text(
-                    "EXPANDIR",
-                    style: new TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.blue),
-                  ),
-                  Spacer(),
-                  Icon(Icons.send),
-                  Icon(Icons.send),
-                  Icon(Icons.send),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-  );
 }
